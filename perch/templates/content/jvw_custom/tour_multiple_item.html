@@ -1,0 +1,10 @@
+<!--* <ol class="c_event-list shows">
+ <li><span class="date">Jan 13</span>: <span class="venue">Fgo Barbara</span class="location", Paris</span></li>
+</ol> *-->
+<perch:before>
+<ol class="c-event-list">
+</perch:before>
+<li<perch:if different="event_date" format="F"> class="is-new-month"</perch:if>><perch:content id="event_date" type="date" format="M jS" label="date" required="true" title="true" />: <perch:content id="venue" type="smarttext" label="Venue" required="true" title="true" />, <perch:content id="location" type="text" label="city" required="true" /></li>
+<perch:after>
+</ol>
+</perch:after>
