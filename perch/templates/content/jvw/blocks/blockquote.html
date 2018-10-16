@@ -1,0 +1,15 @@
+<!--* internal text block template: blockquote
+ *-->
+ <!--* ------------------- REFERENCE MARK UP ---------------- *-->
+<!--* <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+</blockquote>
+<cite>– Aldous Huxley, Brave New World</cite> *-->
+
+<!--* <p> element included in the ride with markdown *-->
+
+<blockquote <perch:if exists="quote_url"> cite="<perch:content type="text" id="quote_cite_url" label="Quotation source url" help="Be sure to type the full, correct website address url including the http:// or https:// and check that the link works" />"</perch:if>><perch:content type="textarea" id="quotation_text" label="Quotation text content" markdown="true" required="true" />
+</blockquote>
+
+<cite>— <perch:content type="smarttext" id="quote_source" label="Quotation source" required="true" /></cite>
+

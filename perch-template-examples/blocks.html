@@ -1,0 +1,42 @@
+<!-- Blocks allow the inclusion of chunks of data in one region to give content editor a choice of templates in a single region. 
+Blocks templates can contain repeaters and can also be part of a Mul5ple Item Region. -->
+
+<perch:blocks> 
+
+	<perch:block type="text" label="Text"> 
+		<div class="fullwidth"> <perch:content id="body" type="textarea" label="Body" markdown="true" editor="markitup" required="true" />
+		</div>
+	</perch:block>
+
+	<perch:block type="quote" label="Pull quote">
+		<blockquote>
+			<perch:content id="body" type="textarea" label="Body" markdown="true" editor="markitup" required="true" />
+			<p><perch:content id="name" type="text" label="Name" required="true" title="true" /></p> 
+		</blockquote>
+	</perch:block> 
+
+	<perch:block type="image" label="Feature image"> 
+		<img class="feature" src="<perch:content type="image" id="image" label="Image" />" alt="<perch:content type="text" id="alt" label="Description" required="true" help="e.g. Photo of MD John Smith with his best wig on" title="true" />" /> 
+	</perch:block>
+
+</perch:blocks>
+<!--* -------------------------------------------------------------- -->
+<!--* <perch:blocks>
+
+  <perch:template path="blocks/article_blocks.html">
+  <perch:block type="image" label="Feature image">
+    <perch:template path="content/blocks/image.html">
+  </perch:block>
+
+</perch:blocks> *-->
+
+<!--* -------------------------------------------------------------- *-->
+<!--* <perch:blocks>
+  <perch:block type="image" label="Feature image">
+    <perch:template path="content/blocks/image.html">
+  </perch:block>
+</perch:blocks> *-->
+
+
+
+

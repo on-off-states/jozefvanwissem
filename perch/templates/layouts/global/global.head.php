@@ -15,6 +15,7 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <link rel="stylesheet" href="/assets/dist/css/style.min.css" />
+        <link rel="stylesheet" href="assets/dist/css/temp.css" />
         <script src="assets/js/respond.min.js"></script>
 	</head>
 	<body class="<?php perch_layout_var('class'); ?>"> 

@@ -1,0 +1,12 @@
+<!-- https://www.slideshare.net/rachelandrew/perch-cms-summit-perch-template-tips-and-tricks -->
+
+<!-- What are Perch Templates? • snippets of markup and Perch template tags • some default templates can be found in perch/ templates/content • you can create and add your own • these can then be selected when deﬁning a Perch Region -->
+
+<!-- a simple template: -->
+<h2>
+	<perch:content id="heading" type="text" label="Heading" /> 
+</h2> 
+<p class="date">
+	<perch:content id="date" type="date" label="Date" format="%d %B %Y" />
+</p>
+<perch:content id="body" type="textarea" label="Body" markdown="true" />
