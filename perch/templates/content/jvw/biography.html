@@ -3,44 +3,35 @@
 <!--* BIO TEXT TEMPLATE *-->
 
 <perch:help>
-	<p>Choose carefully from the provided template fields for the particular content types to match the particular content of each paragraph of your bio text (look for the <!--* <img src="/assets/dist/img/ui-icons/block-arrow.png" alt="block arrow icon" /> *-->&#8195;<svg class="ui-icon" role="img" width="20" height="20" class="icon icon-add" title="Add" aria-label="Add"><use xlink:href="/perch/core/assets/svg/core.svg#add"></use></svg>&#32;<strong>add symbol</strong> located on the lower right):
+	<p>Choose carefully from the provided template fields for the right content types to match the content of each paragraph of your bio text (look for the <!--* <img src="/assets/dist/img/ui-icons/block-arrow.png" alt="block arrow icon" /> *-->&#8195;<svg class="ui-icon" role="img" width="20" height="20" class="icon icon-add" title="Add" aria-label="Add"><use xlink:href="/perch/core/assets/svg/core.svg#add"></use></svg>&#32;<strong>add symbol</strong> located on the lower right):
 	<ul>
-		<li><strong>block quotation</strong> for any block quotations</li>
-		<li><strong>general text paragraph</strong> for paragraphs of ordinary text</li>
+		<li><strong>blockquote</strong> for any block quotations</li>
+		<li><strong>general paragraph</strong> for paragraphs of ordinary text</li>
 	</ul>
-	<p>Within a general text paragraph, you can then include inline quotations, citations of names of works, or url links, or use Markdown syntax to format the text (see the markdown link beside the text entry field). This will make sure your content is nicely formatted for both human and computer readability, and search engine friendly.</p>
-	<!-- * whether or not it is a block quotation or ordinary text. Within a plain text paragraph, you can then include inline quotations, citations of names of works, or url links. This will make sure your content is nicely formatted for both human and computer readability, and search engine friendly. *-->
-	</p>
+	<p><!--* you can then include inline quotations, citations of names of works, or url links, or *-->Within a general paragraph, be sure to use careful and correct punctuation. <strong>Avoid inconsistent use of quotation marks</strong>. If you need to include links or <strong>italicize text to cite a work</strong>, see the markdown link. This will make sure your content is nicely formatted for both human and computer readability, and search engine friendly.</p>
     <p>Be sure to <strong>only fill in the specified content</strong> for each of the template fields provided. If you find you have content that does not fit within the current template, please let me know so we can adjust to meet requirements. Do not be tempted to try and shoehorn content into existing fields!</p>
 </perch:help>
-<perch:content id="text" type="textarea" label="Text" divider-before="Important information" order="3">
 
 <perch:blocks divider-before="Pick and mix of individual paragraph types to make up the whole text" order="1">
 
-  <perch:block type="quote" label="Blockquote" icon="quote">
-  	<blockquote <perch:if exists="quote_url"> cite="<perch:content type="text" id="quote_cite_url" label="Quotation source url" help="Be sure to type the full, correct website address url including the http:// or https:// and check that the link works" />"</perch:if>><perch:content type="textarea" id="quotation_text" label="Quotation text content" markdown="true" required="true" />
-    </blockquote>
-    <cite>— <perch:content type="smarttext" id="quote_source" label="Quotation source" required="true" /></cite>
-	</perch:block> 
-
-	<perch:block type="text" label="General paragraph text" icon="pencil">
-		<perch:content type="textarea" id="paragraph_text" label="Paragraph text content" markdown="true" required="true" help="see the markdown link for text formatting" />
+  
+<!--* block templates *-->
+	<perch:block type="text" label="General paragraph" icon="edit">
+		<perch:template path="content/jvw/blocks/paragraph.html" />
 	</perch:block>
-
-	<!--* <perch:block type="quote" label="Blockquote template" icon="quote">
+	<perch:block type="quote" label="Blockquote" icon="quote">
 		<perch:template path="content/jvw/blocks/blockquote.html" />
-	</perch:block> *-->
+	</perch:block>
+	<!--* !!!!!!!!!!!! BLOCKS WITHIN TEMPLATE DO NOT WORK !!!!!!!!!!!!!!
+	<perch:block type="text" label="Paragraph with blocks" icon="pencil">
+		<perch:template path="content/jvw/blocks/paragraph-with-blocks.html" />
+	</perch:block>
+	*-->
+<!--* ------------------------------------------------------------ *-->
 
 </perch:blocks>
 
-<!--* ------------ TEST BLOCKS SET WITH TEMPLATES ------------- *-->
-<!--* <perch:blocks divider-before="blocks with templates">
-  <perch:block type="image" label="Quotation">
-    <perch:template path="content/jvw/blocks/blockquote.html">
-  </perch:block>
-</perch:blocks> *-->
-
-<!--* ------------------- REFERENCE MARK UP ---------------- *-->
+<!--* ------------------- REFERENCE MARK UP ---------------- 
 <blockquote cite="https://www.huxley.net/bnw/four.html">
     <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
 </blockquote>
@@ -48,15 +39,5 @@
 
 <p>In <cite>2001: A Space Odyssey</cite>, Dave asks HAL to open the pod bay door and HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
 
-<!--* <perch:blocks>
-  <perch:block type="text" label="Text">
-    ...
-  </perch:block>
-  <perch:block type="quote" label="Pull quote">
-    ...
-  </perch:block>
-  <perch:block type="image" label="Feature image">
-    ...
-  </perch:block>
-</perch:blocks> *-->
+*-->
 

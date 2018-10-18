@@ -12,8 +12,8 @@
 - *nice to*: refactor tour date template with `<time datetime="">`[(time mdn)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time) 
 
 
-************************************************************************************************************************************************
-
+************************************************************************************************************************************************ MARKDOWN ********************************************
+[markdown guide — basic syntax](https://www.markdownguide.org/basic-syntax/)
 # The largest heading
 ## The second largest heading
 ###### The smallest heading
@@ -56,6 +56,6 @@ If a task list item description begins with a parenthesis, you'll need to escape
 
 - [ ] \(Optional) Open a followup issue
 
-[mastering markdownhttps](//guides.github.com/features/mastering-markdown/)
+[mastering markdownhttps](https://guides.github.com/features/mastering-markdown/)
 
 [sublime editing](http://docs.sublimetext.info/en/latest/editing/editing.html)

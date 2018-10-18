@@ -1,0 +1,10 @@
+<perch:help><p>Complete this form with details of the apartment.</p></perch:help>
+
+<div class="apartment">
+  <h3 class="<perch:if id="leased" value="yes">leased<perch:else/>available</perch:if>"><perch:content id="apartmentname" type="text" label="Name" required="true" title="true" /> <span>- <perch:if id="leased" value="yes">leased<perch:else/>available</perch:if></span></h3>
+  <p>No. of rooms: <perch:content id="rooms" type="text" label="No. of bedrooms" required="true" size="s" /></p>
+  <div class="description">
+    <perch:content id="description" type="textarea" label="Description" markdown="true" editor="markitup" required="true" notes-before="Add a nice description here, try to make it sound habitable." divider-before="Apartment description" />
+  </div>
+</div>
+<perch:content id="leased" type="checkbox" label="Apt. is leased" value="yes" suppress="true" help="Check this if you want the apt. to display as leased on the website." />
